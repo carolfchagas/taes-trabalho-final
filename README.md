@@ -1,9 +1,4 @@
-# taes-trabalho-final
-
-Aqui está o arquivo todo em Markdown corretamente formatado:
-
-```markdown
-# Portal Vida Saudável
+# taes-trabalho-final: Portal Vida Saudável
 
 Bem-vindo ao repositório do Portal Vida Saudável! Este é um sistema para gerenciamento de treinos, atividades físicas e acompanhamento personalizado.
 
