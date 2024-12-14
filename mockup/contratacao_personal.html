@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contratação de Personal Trainer - Portal Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Portal Fitness</h1>
+            <nav>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <ul id="menu" class="hidden">
+                    <li><a href="treino_ativo.html">Treino Ativo</a></li>
+                    <li><a href="lista_personal_trainers.html">Lista de Personal Trainers</a></li>
+                    <li><a href="perfil_aluno.html">Perfil do Aluno</a></li>
+                    <li><a href="logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hire-section">
+            <h2>Contratação de Personal Trainer</h2>
+            <form id="hire-form">
+                <label for="trainer-name">Personal Trainer:</label>
+                <select id="trainer-name" name="trainer-name" required>
+                    <option value="">Selecione um treinador</option>
+                    <option value="João Silva">João Silva</option>
+                    <option value="Maria Oliveira">Maria Oliveira</option>
+                </select>
+                
+                <label for="plan">Plano de Contratação:</label>
+                <select id="plan" name="plan" required>
+                    <option value="">Selecione um plano</option>
+                    <option value="Mensal">Mensal</option>
+                    <option value="Trimestral">Trimestral</option>
+                    <option value="Semestral">Semestral</option>
+                    <option value="Anual">Anual</option>
+                </select>
+
+                <button type="submit">Confirmar Contratação</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal Fitness. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

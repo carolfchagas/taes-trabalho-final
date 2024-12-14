@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Portal Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Portal Fitness</h1>
+        </div>
+    </header>
+    <main>
+        <div class="registration-container">
+            <h2>Crie sua Conta</h2>
+            <form id="registration-form">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Crie uma senha" required>
+                
+                <label for="confirm-password">Confirmar Senha:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Repita sua senha" required>
+                
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age" placeholder="Sua idade" required>
+                
+                <label for="gender">Sexo:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Selecione</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Feminino</option>
+                    <option value="other">Outro</option>
+                </select>
+                
+                <label for="height">Altura (em cm):</label>
+                <input type="number" id="height" name="height" placeholder="Exemplo: 170" required>
+                
+                <label for="weight">Peso (em kg):</label>
+                <input type="number" id="weight" name="weight" placeholder="Exemplo: 70" required>
+                
+                <label for="goal">Objetivo:</label>
+                <select id="goal" name="goal" required>
+                    <option value="">Selecione seu objetivo</option>
+                    <option value="quality_of_life">Qualidade de Vida</option>
+                    <option value="muscle_hypertrophy">Hipertrofia Muscular</option>
+                    <option value="muscle_strength">Força Muscular</option>
+                    <option value="aerobic_endurance">Resistência Aeróbica</option>
+                    <option value="other">Outro</option>
+                </select>
+                
+                <div id="goal-other-container" style="display: none;">
+                    <label for="goal-other">Descreva seu objetivo:</label>
+                    <textarea id="goal-other" name="goal-other" placeholder="Digite seu objetivo"></textarea>
+                </div>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal Fitness. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,897 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Portal Vida Saudável API",
+    "version": "1.0.0",
+    "description": "API para gerenciamento do portal de vida saudável"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "schemes": ["http"],
+  "paths": {
+    
+    "/users": {
+      "get": {
+        "summary": "Lista todos os usuários",
+        "responses": {
+          "200": {
+            "description": "Lista de usuários"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria um novo usuário",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": { "type": "string" },
+                "email": { "type": "string" },
+                "senha": { "type": "string" },
+                "tipo": { "type": "string" },
+                "idade": { "type": "integer" },
+                "sexo": { "type": "string" },
+                "altura": { "type": "number" },
+                "peso": { "type": "number" },
+                "objetivo": { "type": "string" },
+                "descricao_objetivo": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Usuário criado"
+          }
+        }
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "summary": "Busca um usuário pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuário encontrado"
+          },
+          "404": {
+            "description": "Usuário não encontrado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Exclui um usuário pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuário excluído"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualiza um usuário pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": { "type": "string" },
+                "email": { "type": "string" },
+                "senha": { "type": "string" },
+                "tipo": { "type": "string" },
+                "idade": { "type": "integer" },
+                "sexo": { "type": "string" },
+                "altura": { "type": "number" },
+                "peso": { "type": "number" },
+                "objetivo": { "type": "string" },
+                "descricao_objetivo": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuário atualizado com sucesso"
+          },
+          "404": {
+            "description": "Usuário não encontrado"
+          },
+          "400": {
+            "description": "Erro na atualização do usuário"
+          }
+        }
+      }
+    },
+    "/personal-trainers": {
+      "get": {
+        "summary": "Lista todos os personal trainers",
+        "responses": {
+          "200": {
+            "description": "Lista de personal trainers"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria um novo personal trainer",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id_usuario": { "type": "integer" },
+                "cref": { "type": "string" },
+                "especialidade": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Personal Trainer criado"
+          }
+        }
+      }
+    },
+    "/personal-trainers/{id}": {
+      "get": {
+        "summary": "Busca um personal trainer pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Personal Trainer encontrado"
+          },
+          "404": {
+            "description": "Personal Trainer não encontrado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Exclui um personal trainer pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Personal Trainer excluído"
+          }
+        }
+      }
+    },
+    "/academias": {
+      "get": {
+        "summary": "Lista todas as academias",
+        "responses": {
+          "200": {
+            "description": "Lista de academias"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria uma nova academia",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": { "type": "string" },
+                "endereco": { "type": "string" },
+                "cidade": { "type": "string" },
+                "telefone": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Academia criada"
+          }
+        }
+      }
+    },
+    "/academias/{id}": {
+      "get": {
+        "summary": "Busca uma academia pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Academia encontrada"
+          },
+          "404": {
+            "description": "Academia não encontrada"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualiza uma academia pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": { "type": "string" },
+                "endereco": { "type": "string" },
+                "cidade": { "type": "string" },
+                "telefone": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Academia atualizada"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Exclui uma academia pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Academia excluída"
+          }
+        }
+      }
+    },
+    "/mensagens": {
+      "get": {
+        "summary": "Lista todas as mensagens",
+        "responses": {
+          "200": {
+            "description": "Lista de mensagens"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria uma nova mensagem",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id_remetente": { "type": "integer" },
+                "id_destinatario": { "type": "integer" },
+                "assunto": { "type": "string" },
+                "conteudo": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Mensagem criada"
+          }
+        }
+      }
+    },
+    "/mensagens/{id}": {
+      "get": {
+        "summary": "Busca uma mensagem pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Mensagem encontrada"
+          },
+          "404": {
+            "description": "Mensagem não encontrada"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Exclui uma mensagem pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Mensagem excluída"
+          }
+        }
+      }
+    },
+    "/pagamentos": {
+      "get": {
+        "summary": "Lista todos os pagamentos",
+        "responses": {
+          "200": {
+            "description": "Lista de pagamentos"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria um novo pagamento",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id_aluno": { "type": "integer" },
+                "id_personal_trainer": { "type": "integer" },
+                "modalidade": { "type": "string", "enum": ["Mensal", "Trimestral", "Semestral", "Anual"] },
+                "valor": { "type": "number" },
+                "id_transacao_paypal": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Pagamento criado"
+          }
+        }
+      }
+    },
+    "/pagamentos/{id}": {
+      "get": {
+        "summary": "Busca um pagamento pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Pagamento encontrado"
+          },
+          "404": {
+            "description": "Pagamento não encontrado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Exclui um pagamento pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Pagamento excluído"
+          }
+        }
+      }
+    },
+    "/treinos": {
+      "get": {
+        "summary": "Lista todos os treinos",
+        "responses": {
+          "200": {
+            "description": "Lista de treinos"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria um novo treino",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id_aluno": { "type": "integer" },
+                "id_personal_trainer": { "type": "integer" },
+                "nome": { "type": "string" },
+                "data_inicio": { "type": "string", "format": "date" },
+                "data_fim": { "type": "string", "format": "date" },
+                "objetivo": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Treino criado"
+          }
+        }
+      }
+    },
+    "/treinos/{id}": {
+      "get": {
+        "summary": "Busca um treino pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Treino encontrado"
+          },
+          "404": {
+            "description": "Treino não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualiza um treino pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": { "type": "string" },
+                "data_inicio": { "type": "string", "format": "date" },
+                "data_fim": { "type": "string", "format": "date" },
+                "objetivo": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Treino atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Exclui um treino pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Treino excluído"
+          }
+        }
+      }
+    },
+    "/treinos/aluno/{id_aluno}": {
+      "get": {
+        "summary": "Busca os treinos de um aluno pelo ID",
+        "parameters": [
+          {
+            "name": "id_aluno",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "ID do aluno cujos treinos serão retornados"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de treinos do aluno",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": { "type": "integer" },
+                  "nome": { "type": "string" },
+                  "data_inicio": { "type": "string", "format": "date" },
+                  "data_fim": { "type": "string", "format": "date" },
+                  "objetivo": { "type": "string" },
+                  "aluno_nome": { "type": "string" },
+                  "personal_nome": { "type": "string" }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Nenhum treino encontrado para o aluno"
+          }
+        }
+      }
+    },    
+    "/atividades": {
+      "get": {
+        "summary": "Lista todas as atividades",
+        "responses": {
+          "200": {
+            "description": "Lista de atividades"
+          }
+        }
+      },
+      "post": {
+        "summary": "Cria uma nova atividade",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id_treino": { "type": "integer" },
+                "tipo": { "type": "string", "enum": ["Musculação", "Aeróbico"] },
+                "descricao": { "type": "string" },
+                "series": { "type": "integer" },
+                "repeticoes": { "type": "integer" },
+                "tempo": { "type": "integer" },
+                "intensidade": { "type": "string", "enum": ["Devagar", "Médio", "Intenso"] },
+                "observacoes": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Atividade criada"
+          }
+        }
+      }
+    },
+    "/atividades/{id}": {
+      "get": {
+        "summary": "Busca uma atividade pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atividade encontrada"
+          },
+          "404": {
+            "description": "Atividade não encontrada"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualiza uma atividade pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "tipo": { "type": "string", "enum": ["Musculação", "Aeróbico"] },
+                "descricao": { "type": "string" },
+                "series": { "type": "integer" },
+                "repeticoes": { "type": "integer" },
+                "tempo": { "type": "integer" },
+                "intensidade": { "type": "string", "enum": ["Devagar", "Médio", "Intenso"] },
+                "observacoes": { "type": "string" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atividade atualizada"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Exclui uma atividade pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Atividade excluída"
+          }
+        }
+      }
+    },
+    "/atividades/treino/{treinoId}": {
+      "get": {
+        "summary": "Lista todas as atividades de um treino específico",
+        "description": "Retorna todas as atividades associadas a um treino específico pelo ID do treino.",
+        "parameters": [
+          {
+            "name": "treinoId",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "ID do treino para o qual deseja buscar as atividades"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de atividades do treino",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": { "type": "integer" },
+                  "id_treino": { "type": "integer" },
+                  "tipo": { "type": "string", "enum": ["Musculação", "Aeróbico"] },
+                  "descricao": { "type": "string" },
+                  "series": { "type": "integer" },
+                  "repeticoes": { "type": "integer" },
+                  "tempo": { "type": "integer" },
+                  "intensidade": { "type": "string", "enum": ["Devagar", "Médio", "Intenso"] },
+                  "observacoes": { "type": "string" },
+                  "treino_nome": { "type": "string" }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Treino não encontrado ou sem atividades"
+          },
+          "500": {
+            "description": "Erro ao buscar atividades"
+          }
+        }
+      }
+    },
+    "/registroAtividades": {
+    "get": {
+      "summary": "Lista todos os registros de atividades",
+      "responses": {
+        "200": {
+          "description": "Lista de registros de atividades"
+        }
+      }
+    },
+    "post": {
+      "summary": "Cria um novo registro de atividade",
+      "parameters": [
+        {
+          "in": "body",
+          "name": "body",
+          "required": true,
+          "schema": {
+            "type": "object",
+            "properties": {
+              "id_atividade": { "type": "integer" },
+              "id_aluno": { "type": "integer" },
+              "data_execucao": { "type": "string", "format": "date" },
+              "tempo_realizado": { "type": "integer" }
+            }
+          }
+        }
+      ],
+      "responses": {
+        "201": {
+          "description": "Registro de atividade criado"
+        }
+      }
+    }
+  },
+  "/registroAtividades/{id}": {
+    "get": {
+      "summary": "Busca um registro de atividade pelo ID",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Registro encontrado"
+        },
+        "404": {
+          "description": "Registro não encontrado"
+        }
+      }
+    },
+    "delete": {
+      "summary": "Exclui um registro de atividade pelo ID",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "integer"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Registro excluído"
+        }
+      }
+    }
+  },
+  "/registroAtividades/aluno/{id}": {
+    "get": {
+      "summary": "Obtém os registros de atividades de um aluno pelo ID",
+      "description": "Retorna uma lista de registros de atividades para um aluno específico.",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID do aluno cujas atividades serão buscadas",
+          "type": "integer"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Lista de registros de atividades do aluno",
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "integer", "description": "ID do registro de atividade" },
+                "id_aluno": { "type": "integer", "description": "ID do aluno" },
+                "data_execucao": { "type": "string", "format": "date", "description": "Data de execução da atividade" },
+                "tempo_realizado": { "type": "integer", "description": "Tempo realizado na atividade (em minutos)" },
+                "aluno_nome": { "type": "string", "description": "Nome do aluno" },
+                "atividade_descricao": { "type": "string", "description": "Descrição da atividade" }
+              }
+            }
+          }
+        },
+        "404": {
+          "description": "Nenhum registro de atividades encontrado para o aluno"
+        },
+        "500": {
+          "description": "Erro interno do servidor"
+        }
+      }
+    }
+  },
+  "/auth/login": {
+    "post": {
+      "summary": "Realiza login de um usuário",
+      "parameters": [
+        {
+          "in": "body",
+          "name": "body",
+          "required": true,
+          "schema": {
+            "type": "object",
+            "properties": {
+              "email": { "type": "string" },
+              "senha": { "type": "string" }
+            }
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Login realizado com sucesso",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "message": { "type": "string" },
+              "token": { "type": "string" }
+            }
+          }
+        },
+        "401": {
+          "description": "Senha inválida"
+        },
+        "404": {
+          "description": "Usuário não encontrado"
+        }
+      }
+    }
+  },
+  "/auth/logout": {
+    "post": {
+      "summary": "Realiza logout do usuário",
+      "responses": {
+        "200": {
+          "description": "Logout realizado com sucesso"
+        }
+      }
+    }
+  }   
+  }
+}

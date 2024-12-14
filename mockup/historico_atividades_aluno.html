@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Atividades do Aluno - Portal Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Portal Fitness</h1>
+            <nav>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <ul id="menu" class="hidden">
+                    <li><a href="area_exclusiva_treinador.html">Área do Treinador</a></li>
+                    <li><a href="criacao_treino.html">Criação de Treino</a></li>
+                    <li><a href="edicao_treino.html">Edição de Treino</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="history-section">
+            <h2>Histórico de Atividades do Aluno</h2>
+            <form id="student-selection-form">
+                <label for="student-name">Selecione o Aluno:</label>
+                <select id="student-name" name="student-name" required>
+                    <option value="">Selecione o aluno</option>
+                    <option value="João Silva">João Silva</option>
+                    <option value="Maria Oliveira">Maria Oliveira</option>
+                </select>
+                <button type="submit">Visualizar Histórico</button>
+            </form>
+            <div id="student-history" class="hidden">
+                <h3>Histórico de Atividades: <span id="student-name-display"></span></h3>
+                <ul>
+                    <li>Data: 10/12/2024 - Agachamento: 3 séries de 12 repetições, Corrida: 20 min.</li>
+                    <li>Data: 09/12/2024 - Leg Press: 3 séries de 15 repetições, Bicicleta: 25 min.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal Fitness. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

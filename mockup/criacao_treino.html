@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Treino - Portal Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Portal Fitness</h1>
+            <nav>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <ul id="menu" class="hidden">
+                    <li><a href="area_exclusiva_treinador.html">Área do Treinador</a></li>
+                    <li><a href="historico_atividades_aluno.html">Histórico de Atividades do Aluno</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="create-training-section">
+            <h2>Criação de Treino</h2>
+            <form id="training-form">
+                <label for="student-name">Aluno:</label>
+                <select id="student-name" name="student-name" required>
+                    <option value="">Selecione o aluno</option>
+                    <option value="João Silva">João Silva</option>
+                    <option value="Maria Oliveira">Maria Oliveira</option>
+                </select>
+
+                <label for="training-name">Nome do Treino:</label>
+                <input type="text" id="training-name" name="training-name" placeholder="Digite o nome do treino" required>
+
+                <label for="start-date">Data de Início:</label>
+                <input type="date" id="start-date" name="start-date" required>
+
+                <label for="end-date">Data de Término:</label>
+                <input type="date" id="end-date" name="end-date" required>
+
+                <label for="objective">Objetivo do Treino:</label>
+                <select id="objective" name="objective" required>
+                    <option value="">Selecione o objetivo</option>
+                    <option value="Hipertrofia">Hipertrofia</option>
+                    <option value="Resistência Aeróbica">Resistência Aeróbica</option>
+                    <option value="Força Muscular">Força Muscular</option>
+                </select>
+
+                <label for="activities">Atividades:</label>
+                <textarea id="activities" name="activities" placeholder="Descreva as atividades do treino" required></textarea>
+
+                <button type="submit">Criar Treino</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal Fitness. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

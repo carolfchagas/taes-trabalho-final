@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino Ativo - Portal Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Portal Fitness</h1>
+            <nav>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <ul id="menu" class="hidden">
+                    <li><a href="historico_atividades.html">Histórico de Atividades</a></li>
+                    <li><a href="contato_personal.html">Contato com Personal Trainer</a></li>
+                    <li><a href="perfil_aluno.html">Perfil do Aluno</a></li>
+                    <li><a href="logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="workout-section">
+            <h2>Treino Ativo</h2>
+            <p>Confira abaixo as atividades do seu treino de hoje:</p>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <h3>Agachamento</h3>
+                    <p><strong>Séries:</strong> 3</p>
+                    <p><strong>Repetições:</strong> 12</p>
+                    <p><strong>Observações:</strong> Mantenha a coluna reta durante o movimento.</p>
+                    <button class="mark-complete">Marcar como Concluído</button>
+                </div>
+                <div class="activity-item">
+                    <h3>Corrida na Esteira</h3>
+                    <p><strong>Tempo:</strong> 20 minutos</p>
+                    <p><strong>Intensidade:</strong> Médio</p>
+                    <p><strong>Observações:</strong> Controle a respiração para manter o ritmo.</p>
+                    <button class="mark-complete">Marcar como Concluído</button>
+                </div>
+            </div>
+            <button id="finish-workout">Finalizar Treino</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal Fitness. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

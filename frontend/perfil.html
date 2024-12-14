@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Perfil do Usuário</h1>
+    </header>
+    <main>
+        <form id="perfilForm" class="form-container">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" disabled>
+            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" name="tipo" disabled>
+            </div>
+            <div class="form-group">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade">
+            </div>
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" name="altura" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" name="peso" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="objetivo">Objetivo:</label>
+                <input type="text" id="objetivo" name="objetivo">
+            </div>
+            <div class="form-group">
+                <label for="descricao_objetivo">Descrição do Objetivo:</label>
+                <textarea id="descricao_objetivo" name="descricao_objetivo"></textarea>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="primary-button">Salvar Alterações</button>
+                <button type="button" onclick="navigateTo('index.html')">Voltar</button>
+                <button id="logoutButton" class="secondary-button">Logout</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 Portal Vida Saudável</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

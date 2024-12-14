@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Portal Vida Saudável</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portal Vida Saudável</h1>
+    </header>
+    <main>
+        <section class="form-container">
+            <h2>Cadastro de Usuário</h2>
+            <form id="cadastroForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <label for="tipo">Tipo de Usuário:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="Aluno">Aluno</option>
+                    <option value="Personal Trainer">Personal Trainer</option>
+                </select>
+
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="1">
+
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                </select>
+
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" name="altura" step="0.01">
+
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" name="peso" step="0.01">
+
+                <label for="objetivo">Objetivo:</label>
+                <input type="text" id="objetivo" name="objetivo">
+
+                <label for="descricao_objetivo">Descrição do Objetivo:</label>
+                <textarea id="descricao_objetivo" name="descricao_objetivo"></textarea>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            <button id="voltarLogin" class="secondary-button">Voltar para Login</button>
+            <p id="responseMessage"></p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Portal Vida Saudável</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

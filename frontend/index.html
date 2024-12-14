@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Portal Vida Saudável</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portal Vida Saudável</h1>
+    </header>
+    <main>
+        <section id="welcome-container">
+            <h2>Bem-vindo(a)!</h2>
+            <p id="userType">Tipo de Usuário: <span></span></p>
+        </section>
+        <section id="navigation-container">
+            <h3>O que deseja fazer?</h3>
+            <div id="aluno-navigation" class="hidden">
+                <button onclick="navigateTo('treinoAtivo.html')">Ver Treino Ativo</button>
+                <button onclick="navigateTo('historicoAtividades.html')">Histórico de Atividades</button>
+                <button onclick="navigateTo('listaPersonalTrainers.html')">Lista de Personal Trainers</button>
+                <button onclick="navigateTo('perfil.html')">Editar Perfil</button>
+            </div>
+            <div id="personal-navigation" class="hidden">
+                <button onclick="navigateTo('listaAlunos.html')">Ver Lista de Alunos</button>
+                <button onclick="navigateTo('historicoAtividades.html')">Histórico de Atividades dos Alunos</button>
+                <button onclick="navigateTo('criarTreino.html')">Criar Novo Treino</button>
+                <button onclick="navigateTo('perfil.html')">Editar Perfil</button>
+            </div>
+        </section>
+        <button id="logoutButton" class="secondary-button">Logout</button>
+    </main>
+    <footer>
+        <p>© 2024 Portal Vida Saudável</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

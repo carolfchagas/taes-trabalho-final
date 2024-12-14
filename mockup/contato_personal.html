@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato com Personal Trainer - Portal Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Portal Fitness</h1>
+            <nav>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <ul id="menu" class="hidden">
+                    <li><a href="historico_mensagens.html">Histórico de Mensagens</a></li>
+                    <li><a href="lista_personal_trainers.html">Lista de Personal Trainers</a></li>
+                    <li><a href="perfil_aluno.html">Perfil do Aluno</a></li>
+                    <li><a href="logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="contact-section">
+            <h2>Contato com Personal Trainer</h2>
+            <form id="contact-form">
+                <label for="trainer-name">Personal Trainer:</label>
+                <select id="trainer-name" name="trainer-name" required>
+                    <option value="">Selecione um treinador</option>
+                    <option value="João Silva">João Silva</option>
+                    <option value="Maria Oliveira">Maria Oliveira</option>
+                </select>
+                
+                <label for="subject">Assunto:</label>
+                <input type="text" id="subject" name="subject" placeholder="Digite o assunto" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+                
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal Fitness. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

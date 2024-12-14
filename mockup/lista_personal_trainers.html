@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Personal Trainers - Portal Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Portal Fitness</h1>
+            <nav>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <ul id="menu" class="hidden">
+                    <li><a href="perfil_aluno.html">Perfil do Aluno</a></li>
+                    <li><a href="logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="trainers-section">
+            <h2>Lista de Personal Trainers</h2>
+            <p>Veja abaixo os profissionais disponíveis:</p>
+            <div class="trainers-list">
+                <div class="trainer-item">
+                    <img src="trainer1.jpg" alt="Foto do Trainer 1" class="trainer-photo">
+                    <h3>João Silva</h3>
+                    <p><strong>Especialidade:</strong> Hipertrofia</p>
+                    <p><strong>CREF:</strong> 12345-G/SP</p>
+                    <button class="contact-trainer" data-trainer-id="1">Entrar em Contato</button>
+                    <button class="hire-trainer" data-trainer-id="1">Contratar</button>
+                </div>
+                <div class="trainer-item">
+                    <img src="trainer2.jpg" alt="Foto do Trainer 2" class="trainer-photo">
+                    <h3>Maria Oliveira</h3>
+                    <p><strong>Especialidade:</strong> Resistência Aeróbica</p>
+                    <p><strong>CREF:</strong> 67890-G/SP</p>
+                    <button class="contact-trainer" data-trainer-id="2">Entrar em Contato</button>
+                    <button class="hire-trainer" data-trainer-id="2">Contratar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal Fitness. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

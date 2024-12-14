@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Portal Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Portal Fitness</h1>
+        </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <div class="options">
+                    <a href="#">Esqueceu a senha?</a>
+                    <label>
+                        <input type="checkbox" id="remember-me"> Lembrar-me
+                    </label>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+            <p>Não tem uma conta? <a href="cadastro.html" id="create-account-link">Criar conta</a></p>
+            <p>Ou faça login com:</p>
+            <div class="social-login">
+                <button id="biometric-login">Biometria</button>
+                <button id="google-login">Google</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Portal Fitness. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
